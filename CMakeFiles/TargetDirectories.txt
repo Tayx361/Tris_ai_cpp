@@ -1,3 +1,0 @@
-/home/franco/Scrivania/Programmazione/C++/tris/CMakeFiles/tictactoe.dir
-/home/franco/Scrivania/Programmazione/C++/tris/CMakeFiles/edit_cache.dir
-/home/franco/Scrivania/Programmazione/C++/tris/CMakeFiles/rebuild_cache.dir
