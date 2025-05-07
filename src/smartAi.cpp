@@ -3,7 +3,7 @@
 
 void win(char tavola[3][3], int mossa){ 
   char personaggio;
-  bool did_win = false;
+  //bool did_win = false;
 
   if (mossa % 2 == 0) {
       personaggio = 'X';
