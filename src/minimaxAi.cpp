@@ -25,10 +25,10 @@ int minimax(char tavola[3][3], int mossa, char maxPlayer){
     (mossa%2==0) ? personaggio = 'X' : personaggio = 'O';
 	int eval;
 	
-	int score = fine_partita(tavola, mossa, maxPlayer);
+	int punteggio = fine_partita(tavola, mossa, maxPlayer);
 
-	if(score != -2){
-		return score;	
+	if(punteggio != -2){
+		return punteggio;	
 	}
 
 	if(maxPlayer == personaggio){
@@ -64,8 +64,8 @@ void minimaxMakeMove(char tavola[3][3], int mossa){
 	char personaggio;
 	(mossa%2==0) ? personaggio = 'X' : personaggio = 'O';
 	
-	int bestScore = -2;
-	int bestScoreX = 0, bestScoreY = 0;
+	int migliorPunteggio = -2;
+	int migliorX = 0, migliorY = 0;
 	int currentScore;
 	for(int i=0; i<3; i++){
 		for(int j=0; j<3; j++){
@@ -73,14 +73,14 @@ void minimaxMakeMove(char tavola[3][3], int mossa){
 				tavola[i][j] = personaggio;
 				currentScore = minimax(tavola, mossa+1, personaggio);
 				tavola[i][j] = ' ';
-				if(currentScore > bestScore){
-					bestScore = currentScore;
-					bestScoreX = i;
-					bestScoreY = j;
+				if(currentScore > migliorPunteggio){
+					migliorPunteggio = currentScore;
+					migliorX = i;
+					migliorY = j;
 				}
 			}
 		}
 	}	
 
-	tavola[bestScoreX][bestScoreY] = personaggio;
+	tavola[migliorX][migliorY] = personaggio;
 }

@@ -12,6 +12,7 @@ void fill_board(char tavola[3][3]) {
 
 void display_board(char tavola[3][3]) {
     std::system("clear");
+    //std::system("cls");
     std::cout << "    0   1   2  " << std::endl;
 
     for(int i = 0; i < 3; i++) {

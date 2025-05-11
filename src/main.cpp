@@ -11,7 +11,14 @@ int main() {
     char tavola[3][3];
     fill_board(tavola);
 
-    int mossa = 0;
+    int mossa = 0, difficolta;
+
+    std::cout << "Benvenuto! Inserire una difficolta':\n0: Umano vs Umano\n1: IA che fa mosse a caso\n2: IA semi-intelligente\n3: IA fortissima\n";
+    std::cin >> difficolta;
+    while(difficolta < 0 || difficolta > 3){
+      std::cout << "Errore! Input non valido, riprovare.\n";
+      std::cin >> difficolta;
+    }
 
     while(true) {
         display_board(tavola);
@@ -19,7 +26,21 @@ int main() {
           choose_move(tavola, mossa);
         }
         else{
-          minimaxMakeMove(tavola, mossa);
+          switch(difficolta){
+            case 0:{
+              choose_move(tavola, mossa);
+            }
+            case 1:{
+              random_choose_move(tavola, mossa);
+              break;
+            }
+            case 2:{
+              smartAi_choose_move(tavola, mossa);
+            }
+            case 3:{
+              minimaxMakeMove(tavola, mossa);
+            }
+          }
         }
 
         if(has_won(tavola, mossa)) {
