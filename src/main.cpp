@@ -19,7 +19,7 @@ int main() {
           choose_move(tavola, mossa);
         }
         else{
-          smartAi_choose_move(tavola, mossa);
+          minimaxMakeMove(tavola, mossa);
         }
 
         if(has_won(tavola, mossa)) {
