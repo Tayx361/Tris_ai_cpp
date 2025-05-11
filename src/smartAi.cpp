@@ -1,6 +1,8 @@
 #include "ai.h"
 #include "interface.h"
 
+#include <iostream>
+
 void win(char tavola[3][3], int mossa){ 
   char personaggio;
   //bool did_win = false;

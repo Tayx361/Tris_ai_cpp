@@ -11,7 +11,7 @@ void fill_board(char tavola[3][3]) {
 }
 
 void display_board(char tavola[3][3]) {
-    std::system("clear");
+    std::cout << "\033[2J\033[1;1H";
     //std::system("cls");
     std::cout << "    0   1   2  " << std::endl;
 

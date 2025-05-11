@@ -29,6 +29,7 @@ int main() {
           switch(difficolta){
             case 0:{
               choose_move(tavola, mossa);
+              break;
             }
             case 1:{
               random_choose_move(tavola, mossa);
@@ -36,9 +37,11 @@ int main() {
             }
             case 2:{
               smartAi_choose_move(tavola, mossa);
+              break;
             }
             case 3:{
               minimaxMakeMove(tavola, mossa);
+              break;
             }
           }
         }
